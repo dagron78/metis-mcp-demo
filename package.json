@@ -1,0 +1,39 @@
+{
+  "name": "metis-mcp-tools",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) tools for the Metis RAG application",
+  "main": "index.js",
+  "scripts": {
+    "start:db": "node tools/database-tool.js",
+    "start:vector": "node tools/vector-store-tool.js",
+    "start:doc": "node tools/document-processing-tool.js",
+    "start:llm": "node tools/llm-interaction-tool.js",
+    "start:all": "concurrently \"npm run start:db\" \"npm run start:vector\" \"npm run start:doc\" \"npm run start:llm\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dagron78/metis-mcp-demo.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "rag",
+    "metis",
+    "llm",
+    "vector-store",
+    "document-processing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dagron78/metis-mcp-demo/issues"
+  },
+  "homepage": "https://github.com/dagron78/metis-mcp-demo#readme",
+  "dependencies": {
+    "@modelcontextprotocol/server": "^0.1.0",
+    "chromadb": "^1.7.0",
+    "concurrently": "^8.2.2",
+    "langchain": "^0.1.0",
+    "pg": "^8.11.3"
+  }
+}
